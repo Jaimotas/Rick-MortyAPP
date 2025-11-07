@@ -1,0 +1,18 @@
+.personajes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+}

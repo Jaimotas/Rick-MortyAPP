@@ -1,1 +1,11 @@
-<p>personajes-list works!</p>
+<h2>Personajes de Rick y Morty</h2>
+
+<div *ngIf="loading">Cargando personajes...</div>
+
+<div class="personajes" *ngIf="!loading">
+  <div *ngFor="let p of personajes" class="card">
+    <img [src]="p.image" alt="{{p.name}}">
+    <h3>{{p.name}}</h3>
+    <p>{{p.species}} - {{p.status}}</p>
+  </div>
+</div>

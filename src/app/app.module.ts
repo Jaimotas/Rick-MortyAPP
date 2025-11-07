@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonajesListComponent } from './components/personajes-list/personajes-list.component';
-import { PersonajeDetailComponent } from './components/personaje-detail/personaje-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PersonajesListComponent,
-    PersonajeDetailComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    PersonajesListComponent
   ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
